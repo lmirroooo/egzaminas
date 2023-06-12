@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="helpdesk.controller.DashboardController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="798.0" prefWidth="200.0">
+            <children>
+            <Label layoutX="523.0" layoutY="48.0" text="Username:" />
+            <Label layoutX="553.0" layoutY="77.0" text="Role:" />
+            <Label fx:id="username_label" layoutX="599.0" layoutY="48.0" text="Antanas">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="role_label" layoutX="599.0" layoutY="77.0" text="User">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+
+            <Button fx:id="log_out_button" layoutX="596.0" layoutY="14.0" mnemonicParsing="false" text="Log out" />
+            <TextField fx:id="title" layoutX="22.0" layoutY="109.0" />
+            <Label layoutX="22.0" layoutY="77.0" text="Title" />
+            <Label layoutX="22.0" layoutY="167.0" text="Description" />
+            <Label layoutX="22.0" layoutY="391.0" text="Rating" />
+            <Label layoutX="22.0" layoutY="478.0" text="Category" />
+            <TextField fx:id="descripton" layoutX="22.0" layoutY="200.0" prefHeight="168.0" prefWidth="149.0" />
+            <TextField fx:id="rating" layoutX="22.0" layoutY="428.0" />
+            <TextField fx:id="categoty" layoutX="22.0" layoutY="504.0" />
+            <Button fx:id="add" layoutX="21.0" layoutY="557.0" mnemonicParsing="false" onAction="#onAddAction" text="Add" />
+            <Button fx:id="search" layoutX="20.0" layoutY="604.0" mnemonicParsing="false" onAction="#onSearchAction" text="Search" />
+            <Button fx:id="delete" layoutX="92.0" layoutY="557.0" mnemonicParsing="false" onAction="#onDeleteAction" text="Delete" />
+            <Button fx:id="update" layoutX="90.0" layoutY="604.0" mnemonicParsing="false" onAction="#onUpdateAction" text="Update" />
+<!--            <Label fx:id="message" layoutX="22.0" layoutY="734.0" prefHeight="17.0" prefWidth="149.0" textFill="RED" />-->
+            </children>
+        </AnchorPane>
+      <AnchorPane prefHeight="798.0" prefWidth="355.0">
+         <children>
+                <TableView fx:id="table" layoutY="105.0" prefHeight="685.0" prefWidth="800.0">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="ID" />
+                        <TableColumn prefWidth="75.0" text="TITLE" />
+                        <TableColumn prefWidth="275.0" text="DESCRIPTION" />
+                        <TableColumn prefWidth="57.0" text="RATING" />
+                        <TableColumn prefWidth="150.0" text="CATEGORY" />
+                    </columns>
+                </TableView>
+         </children></AnchorPane>
+    </items>
+</SplitPane>
